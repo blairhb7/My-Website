@@ -1,0 +1,2616 @@
+*{
+    box-sizing: border-box;
+    margin: 0;
+    
+}
+
+
+a {
+    text-decoration: none;
+    color: inherit;
+    
+}
+
+@keyframes slide-in-anim {
+	20% {
+		opacity: 0;
+	}
+	60% {
+		transform: translateX(0%);
+	}
+	75% {
+		transform: translateX(0%);
+	}
+	100% {
+		opacity: 1;
+		transform: translateX(0%);
+	}
+}
+
+
+@media only screen and (min-width: 1000px) {
+    
+/****** Landing Page********/
+
+
+.container {
+    height: 100vh;
+    width: 100%;
+    display: grid;
+    grid-template-columns: 80px 1fr;
+}
+
+#landing-page {
+display: grid;
+grid-template-columns: 1fr 1fr;
+grid-template-areas: 'left right';
+font-family: 'Cinzel', serif;
+width: 100%;
+}
+
+
+.left-side {
+    grid-area: left;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    height: 700px;
+    transform: translateX(-10%);
+    animation: slide-in-anim 3.9s ease-out forwards;
+
+    
+}
+
+.left-side:hover {
+    transform: scale(1.1);
+    transition: 2s ease-in-out;
+}
+
+.subtitle-left {
+    font-size: 1em;
+    text-transform: uppercase;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-family: 'Cinzel', serif;
+    
+}
+
+.title {
+    font-size: 3.5rem;
+    text-transform: uppercase;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-family: 'Cinzel', serif;
+}
+
+.info-linkleft {
+    display: flex;
+    justify-content: center;
+    text-align: center;
+    font-size: .7em;
+    padding-top: 20px;
+    text-transform: uppercase;
+    
+}
+
+
+
+
+
+
+/****** right side Page********/
+
+.right-side {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    grid-area: right;
+    background-image: url('black.jpg');
+    background-size: cover;
+   background-attachment: fixed;
+    height: 700px;
+    color: white;
+  
+    
+}
+
+.subtitle-right {
+    font-size: 1em;
+    text-transform: uppercase;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transform: translateX(10%);
+    animation: slide-in-anim 3.9s ease-out forwards;
+    font-family: 'Racing Sans One', cursive;
+}
+
+.work-bubble {
+    font-family: 'Racing Sans One', cursive;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 3.5rem;
+    color: white;
+    text-transform: uppercase;
+    transform: translateX(10%);
+    animation: slide-in-anim 3.9s ease-out forwards;
+}
+
+
+
+
+
+
+
+
+
+
+
+/****** button style ********/
+#btn {
+    line-height: 50px;
+    height: 50px;
+    text-align: center;
+    width: 250px;
+    cursor: pointer;
+    display: block;
+    margin: 0 auto;
+    font-family: 'Racing Sans One', cursive;
+  }
+
+
+
+.btn {
+    line-height: 50px;
+    height: 50px;
+    text-align: center;
+    width: 250px;
+    cursor: pointer;
+    display: block;
+    margin: 0 auto;
+    font-family: 'Racing Sans One', cursive;
+  }
+
+
+
+#btn-three {
+    background-color: rgba(0, 0, 0, 0.863);
+    color: rgb(255, 255, 255);
+    transition: all 0.5s;
+    position: relative;
+    justify-content: center;
+    text-align: center;
+    font-size: .9em;
+    padding-top: 0px;
+    text-transform: uppercase;
+    transform: translateX(10%);
+    animation: slide-in-anim 3.9s ease-out forwards;
+  }
+  #btn-three::before {
+    position: absolute;
+    display: block;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    transition: all 0.3s;
+  }
+  #btn-three:hover::before {
+    opacity: 0 ;
+    transform: scale(0.5,0.5);
+  }
+  #btn-three::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 1;
+    opacity: 0;
+    transition: all 0.3s;
+    border: 1px solid rgba(0, 0, 0, 0.5);
+    transform: scale(1.2,1.2);
+  }
+  #btn-three:hover::after {
+    opacity: 1;
+    transform: scale(1,1);
+    
+  }
+  #btn-three:hover{
+      
+      color: #000;
+      background-color: rgba(94, 94, 94, 0);
+  }
+
+
+.btn-three {
+    
+    color: #FFF;
+    transition: all 0.5s;
+    position: relative;
+    justify-content: center;
+    text-align: center;
+    font-size: .8em;
+    padding-top: 0px;
+    text-transform: uppercase;
+    transform: translateX(10%);
+    animation: slide-in-anim 3.9s ease-out forwards;
+  }
+  .btn-three::before {
+    content: '';
+    position: absolute;
+    display: block;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 1;
+    background-color: rgba(255,255,255,0.1);
+    transition: all 0.3s;
+  }
+  .btn-three:hover::before {
+    opacity: 0 ;
+    transform: scale(0.5,0.5);
+  }
+  .btn-three::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 1;
+    opacity: 0;
+    transition: all 0.3s;
+    border: 1px solid rgba(255,255,255,0.5);
+    transform: scale(1.2,1.2);
+  }
+  .btn-three:hover::after {
+    opacity: 1;
+    transform: scale(1,1);
+  }
+
+
+
+
+
+
+
+
+/****** footer********/
+
+.footer {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    height: 70px;
+    background-color: rgb(19, 19, 19);
+    z-index: 1;
+    width: 100vw;
+}
+
+.foot-text {
+    color: white;
+    text-align: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-transform: uppercase;
+    font: 1em sans-serif;
+}
+
+.footer-link {
+    display: flex;
+    justify-content: center;
+    color: #FFF;
+    text-transform: uppercase;
+    
+}
+
+.footer-link a {
+    padding-right: 10px;
+    font-size: .7em;
+}
+
+
+
+
+
+
+
+/****** contact Page********/
+
+
+.contact-box {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    background-color: rgb(138, 138, 138);
+    height: 550px;
+    margin: 80px;
+    transform: translateX(10%);
+    animation: slide-in-anim 2.9s ease-out forwards;
+    box-shadow: 25px 15px 30px 1px rgb(170, 170, 170);
+}
+
+.contact-info {
+    background-color: rgb(20, 20, 20);
+    
+}
+
+/****** contact chat box rightside********/
+
+.chat {
+    padding: 0 25px;
+    color: white;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 4.7em;
+    font-family: 'Racing Sans One', cursive;
+    
+}
+
+
+.contact-form {
+    width: 400px;
+    display: block;
+    margin: 0 auto;
+    padding-top: 40px;
+}
+
+
+.feedback-input {
+    color:white;
+    font-family: Helvetica, Arial, sans-serif;
+    font-weight:500;
+    font-size: 18px;
+    line-height: 22px;
+    background-color: transparent;
+    border:2px solid #b8b8b8;
+    transition: all 0.3s;
+    padding: 13px;
+    margin-bottom: 15px;
+    outline:0;
+    width: 100%;
+  }
+  
+  .feedback-input:focus { border:2px solid #b8b8b8; }
+  
+  textarea {
+    height: 150px;
+    line-height: 150%;
+    resize:vertical;
+  }
+  
+  [type="submit"] {
+    font-family: 'Montserrat', Arial, Helvetica, sans-serif;
+    width: 100%;
+    background:#b8b8b8;
+    border-radius:5px;
+    border:0;
+    cursor:pointer;
+    color:white;
+    font-size:24px;
+    padding-top:10px;
+    padding-bottom:10px;
+    transition: all 0.3s;
+    margin-top:-4px;
+    font-weight:700;
+  }
+  [type="submit"]:hover { background:#b8b8b8; }
+
+
+
+
+
+
+/****** contact About box leftside********/
+
+
+.about-box {
+    display: grid;
+    background-color: rgba(255, 255, 255, 0.651);
+    grid-template-columns: 1fr;
+    grid-template-rows: 100px;
+   
+}
+
+.about {
+    display: flex;
+    align-items: center;
+    padding: 10px 25px;
+    font-size: 3em;
+    height: 100px;
+    font-family: 'Racing Sans One', cursive;
+}
+
+.quote {
+    height: 28px;
+    padding: 0px 15px;
+}
+
+.text {
+   padding: 0 25px;
+   font-size: 1.5;
+   line-height: 2;
+   font-family: 'Cinzel', serif;
+   font-weight: 400;
+}
+
+.skills {
+    background-color: #000;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.skills-icon {
+    font-size: 4em;
+    z-index: 2;
+    color: var(--clr);
+    display: flex;
+    justify-content: center;
+    flex-direction: row;
+}
+
+.skills-icon:hover{
+    animation: myAnim 2s ease 0s 1 normal forwards;
+}
+
+.skills h2 {
+    color: var(--clr); 
+    font-size: 2.5em;
+    text-transform: uppercase;
+    padding-right: 25px;
+    justify-content: start;
+    display: flex;
+    font-family: 'Racing Sans One', cursive;
+}
+
+@keyframes myAnim {
+    0% {
+      transform: translate(0);
+    }
+  
+    20% {
+      transform: translate(-2px, 2px);
+    }
+  
+    40% {
+      transform: translate(-2px, -2px);
+    }
+  
+    60% {
+      transform: translate(2px, 2px);
+    }
+  
+    80% {
+      transform: translate(2px, -2px);
+    }
+  
+    100% {
+      transform: translate(0);
+    }
+  }
+
+
+
+
+
+
+  /****** Work page  ********/
+
+  .work-section {
+    transform: translateX(10%);
+    animation: slide-in-anim 2.9s ease-out forwards;
+  }
+
+  .work-headline {
+    display: flex;
+    justify-content: center;
+    text-align: center;
+    height: 200px;
+  }
+
+  .headline {
+    font-size: 4em;
+    text-transform: uppercase;
+    color: #000;
+    padding: 40px 0 0 0;
+    font-family: 'Cinzel', serif;
+  }
+
+
+  /****** grid page  ********/
+
+  .work-grid {
+      height: 350px;
+      display: grid;
+      grid-template-columns: 1fr 1fr 1fr 1fr;
+      padding: 0 50px 0 70px;
+      gap: 20px;
+      
+  }
+
+ .boxes {
+      background-color: rgb(29, 29, 29);
+      color: #FFF;
+      display: flex;
+      font-size: 1.2em;
+      font-weight: bold;
+      padding-bottom: 25px;
+      justify-content: center;
+      align-items: flex-end;
+      text-transform: uppercase;
+      box-shadow: 21px 16px 27px 1px #202020;
+      background-size: cover;
+      background-position: center;
+  }
+
+  .boxes:hover {
+    transform: translateY(-30px);
+    transition: 2s ease;
+    background-color: rgb(0, 0, 0);
+    opacity: .7;
+    color: #000;
+    visibility: visible;
+  }
+
+
+
+
+  /****** case studies  ********/
+
+  .case-studies {
+    display: flex;
+      justify-content: center;
+      text-align: center;
+      width: 100%;
+      flex-direction: column;
+      padding-top: 50px;
+      height: 1000px;
+  }
+
+  .case-title {
+      height: 50px;
+      padding: 0px 0;
+    font-size: 2.5em;
+    text-transform: uppercase;
+    font-family: 'Cinzel', serif;
+  }
+
+  .case-discription {
+      display: block;
+      margin: 0 auto;
+      padding: 20px 0;
+      font-size: 1.5em;
+      width: 500px;
+      font-family: 'Cinzel', serif;
+  }
+
+  .case-boxes {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 20px;
+      width: 100%;
+      height: 550px;
+      padding: 10px 50px;
+      overflow: hidden;
+    position: relative;
+  }
+
+  .box {
+      background-color: rgb(177, 174, 174);
+      background-size: cover;
+      display: flex;
+      text-align: center;
+      justify-content: flex-end;
+      padding: 15px;
+      color: #FFF;
+      text-transform: uppercase;
+      box-shadow: 21px 16px 27px 1px #202020;
+      overflow: hidden;
+    position: relative;
+    width: 100%;
+    height: 100%;
+  }
+
+  .boxes:nth-child(1){background-image: url('weather.jpg');}
+  .boxes:nth-child(2){background-image: url('car.jpg');}
+  .boxes:nth-child(3){background-image: url('app.jpg');}
+  .boxes:nth-child(4){background-image: url('nature.jpg');}
+
+  .box:nth-child(1){background-image: url('weather.jpg');}
+  .box:nth-child(2){background-image: url('car.jpg');}
+  .box:nth-child(3){background-image: url('app.jpg');}
+  .box:nth-child(4){background-image: url('nature.jpg');}
+
+
+.website-info {
+    color: rgb(255, 255, 255);
+}
+
+
+
+.box:hover {
+    color: #FFF;
+    transition: 2s;
+    transform: scale(1.02);  
+}
+
+
+
+
+ 
+/****** case studies page css ********/
+
+.case-contain {
+    height: 100vh;
+}
+
+.case-header {
+    height: 600px;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: flex-end;
+    background-image: url('car.jpg');
+    background-size: cover;
+    background-attachment: fixed;
+}
+
+.headline-1 {
+    color: rgb(235, 33, 33);
+    font-size: 6em;
+    font-family: 'Racing Sans One', cursive;
+    padding-right: 25px;
+    
+}
+
+.website-link {
+    color: #FFF;
+    margin-right: 105px;
+    height: 40px;
+    width: 150px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-transform: uppercase;
+    border: var(--clr) 2px solid;
+}
+
+
+.website-link:hover {
+    background-color: var(--clr);
+    color: #FFF;
+    transition: 2s ease;
+}
+
+/****** case section about & colors page css ********/
+
+.case-aboutsection {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    height: 500px;
+}
+
+.case-about {
+    color: white;
+    background-color: rgb(22, 28, 49);
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.case-about h2 {
+    font-size: 4em;
+    padding-bottom: 20px;
+    font-family: 'Racing Sans One', cursive;
+}
+
+.case-about p {
+    font-size: 1.3em;
+    text-align: center;
+    width: 440px;
+    font-family: 'Cinzel', serif;
+}
+
+
+.case-colors {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    
+}
+
+.colors {
+    background-color: var(--clr);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 20px auto;
+    border-radius: 50%;
+    height: 200px;
+    width: 200px;
+    box-shadow: 19px 10px 37px 1px #4b4b4b;
+}
+
+.hex-color {
+    color: rgb(255, 255, 255);
+    
+}
+
+
+.font-section {
+    height: 500px;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+}
+
+.typeography {
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    flex-direction: column;
+    text-transform: uppercase;
+    padding-top: 55px;
+    padding-left: 90px;
+    font-family: 'Racing Sans One', cursive;
+
+}
+
+.font {
+    font-size: 3.6em;
+    padding-left: 25px;
+    
+    font-family: 'Racing Sans One', cursive;
+
+}
+
+.letters {
+    font-size: 2.4em;
+    line-height: 2;
+    letter-spacing: 2px;
+    width: 470px;
+    padding: 30px;
+    font-family: 'Racing Sans One', cursive;
+
+}
+
+
+#font {
+    font-size: 3.6em;
+    padding-left: 25px;
+    font-family: 'Cinzel', serif;
+}
+
+#letters {
+    font-size: 2.4em;
+    line-height: 2;
+    letter-spacing: 2px;
+    width: 470px;
+    padding: 30px;
+    font-family: 'Cinzel', serif;
+}
+
+
+/****** case section link arrow css ********/
+
+.case-link {
+    height: 250px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color:#161c31 ;
+}
+
+.next-link {
+    color: #FFF;
+    font-size: 4em;
+    font-family: 'Racing Sans One', cursive;
+
+}
+
+.arrow {
+    font-size: 4em;
+    color: white;
+    padding-left: 20px;
+    padding-top: 15px;
+}
+
+.case-link:hover {
+    transform: translateX(50px);
+    transition: 2s ease;
+    background-color: rgb(235, 33, 33);
+        font-family: 'Racing Sans One', cursive;
+
+}
+
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+
+
+
+
+/****** Media screen size css Page********/
+
+
+
+  @media only screen and (min-width: 320px) and (max-width: 820px) {
+
+
+
+
+/****** Landing Page********/
+
+
+.container {
+    height: 100vh;
+}
+
+#landing-page {
+display: flex;
+flex-direction: column;
+font-family: 'Cinzel', serif;
+height: 100%;
+width: 100%;
+}
+
+
+.left-side {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    transform: translateX(-10%);
+    animation: slide-in-anim 3.9s ease-out forwards;
+    height: 100%;
+    
+}
+
+.left-side:hover {
+    transform: scale(1.1);
+    transition: 2s ease-in-out;
+}
+
+.subtitle-left {
+    font-size: .5em;
+    text-transform: uppercase;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-family: 'Cinzel', serif;
+    
+}
+
+.title {
+    font-size: 1.5rem;
+    text-transform: uppercase;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-family: 'Cinzel', serif;
+}
+
+.info-linkleft {
+    display: flex;
+    justify-content: center;
+    text-align: center;
+    font-size: .7em;
+    padding-top: 20px;
+    text-transform: uppercase;
+    
+}
+
+
+
+
+
+
+/****** right side Page********/
+
+.right-side {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    grid-area: right;
+    background-image: url('black.jpg');
+    background-size: cover;
+   background-attachment: fixed;
+    color: white;
+  height: 100%;
+    
+}
+
+.subtitle-right {
+    font-size: .5em;
+    text-transform: uppercase;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transform: translateX(10%);
+    animation: slide-in-anim 3.9s ease-out forwards;
+    font-family: 'Racing Sans One', cursive;
+}
+
+.work-bubble {
+    font-family: 'Racing Sans One', cursive;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 1.5rem;
+    color: white;
+    text-transform: uppercase;
+    transform: translateX(10%);
+    animation: slide-in-anim 3.9s ease-out forwards;
+}
+
+
+
+
+
+
+
+/****** button style ********/
+#btn {
+    line-height: 50px;
+    height: 50px;
+    text-align: center;
+    width: 250px;
+    cursor: pointer;
+    display: block;
+    margin: 0 auto;
+    font-family: 'Racing Sans One', cursive;
+  }
+
+  .btn-three span {
+    display: flex;
+    align-items: center;
+}
+
+
+.btn {
+    line-height: 50px;
+    height: 50px;
+    text-align: center;
+    width: 250px;
+    cursor: pointer;
+    display: block;
+    margin: 0 auto;
+    font-family: 'Racing Sans One', cursive;
+  }
+
+  #btn-three span {
+      display: flex;
+      align-items: center;
+  }
+
+
+#btn-three {
+    background-color: rgba(0, 0, 0, 0.863);
+    color: rgb(255, 255, 255);
+    transition: all 0.5s;
+    width: 150px;
+    height: 30px;
+    display: flex;
+    position: relative;
+    justify-content: center;
+    text-align: center;
+    font-size: .5em;
+    padding-top: 0px;
+    text-transform: uppercase;
+    transform: translateX(10%);
+    animation: slide-in-anim 3.9s ease-out forwards;
+  }
+  #btn-three::before {
+    position: absolute;
+    display: block;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    transition: all 0.3s;
+  }
+  #btn-three:hover::before {
+    opacity: 0 ;
+    transform: scale(0.5,0.5);
+  }
+  #btn-three::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 1;
+    opacity: 0;
+    transition: all 0.3s;
+    border: 1px solid rgba(0, 0, 0, 0.5);
+    transform: scale(1.2,1.2);
+  }
+  #btn-three:hover::after {
+    opacity: 1;
+    transform: scale(1,1);
+    
+  }
+  #btn-three:hover{
+      
+      color: #000;
+      background-color: rgba(94, 94, 94, 0);
+  }
+
+
+.btn-three {
+    
+    color: #FFF;
+    transition: all 0.5s;
+    position: relative;
+    justify-content: center;
+    text-align: center;
+    display: flex;
+    width: 150px;
+    height: 30px;
+    font-size: .5em;
+    padding-top: 0px;
+    text-transform: uppercase;
+    transform: translateX(10%);
+    animation: slide-in-anim 3.9s ease-out forwards;
+  }
+  .btn-three::before {
+    content: '';
+    position: absolute;
+    display: block;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 1;
+    background-color: rgba(255,255,255,0.1);
+    transition: all 0.3s;
+  }
+  .btn-three:hover::before {
+    opacity: 0 ;
+    transform: scale(0.5,0.5);
+  }
+  .btn-three::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 1;
+    opacity: 0;
+    transition: all 0.3s;
+    border: 1px solid rgba(255,255,255,0.5);
+    transform: scale(1.2,1.2);
+  }
+  .btn-three:hover::after {
+    opacity: 1;
+    transform: scale(1,1);
+  }
+
+
+
+
+/****** footer********/
+
+.footer {
+    display: flex;
+    justify-content: center;
+    height: 60px;
+    background-color: rgb(19, 19, 19);
+    z-index: 1;
+    width: 100vw;
+}
+
+.foot-text {
+    color: white;
+    text-align: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-transform: uppercase;
+    font: .8em sans-serif;
+}
+
+
+
+
+
+
+  
+/****** contact Page********/
+
+
+
+.contact-box {
+    display: grid;
+    grid-template-columns: 1fr;
+    background-color: rgb(138, 138, 138);
+    height: 100%;
+    margin: 0px;
+    transform: translateX(10%);
+    animation: slide-in-anim 2.9s ease-out forwards;
+    box-shadow: 25px 15px 30px 1px rgb(170, 170, 170);
+}
+
+.contact-info {
+    background-color: rgb(20, 20, 20);
+    height: 510px;
+    
+}
+
+/****** contact chat box rightside********/
+
+.chat {
+    padding: 0 25px;
+    color: white;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 2.7em;
+    font-family: 'Racing Sans One', cursive;
+}
+
+
+.contact-form {
+    width: 400px;
+    display: block;
+    margin: 0 auto;
+    padding-top: 40px;
+}
+
+
+.feedback-input {
+    color:white;
+    font-family: Helvetica, Arial, sans-serif;
+    font-weight:500;
+    font-size: 18px;
+    line-height: 22px;
+    background-color: transparent;
+    border:2px solid #b8b8b8;
+    transition: all 0.3s;
+    padding: 13px;
+    margin-bottom: 15px;
+    outline:0;
+    width: 100%;
+  }
+  
+  .feedback-input:focus { border:2px solid #b8b8b8; }
+  
+  textarea {
+    height: 150px;
+    line-height: 150%;
+    resize:vertical;
+  }
+  
+  [type="submit"] {
+    font-family: 'Montserrat', Arial, Helvetica, sans-serif;
+    width: 100%;
+    background:#b8b8b8;
+    border-radius:5px;
+    border:0;
+    cursor:pointer;
+    color:white;
+    font-size:24px;
+    padding-top:10px;
+    padding-bottom:10px;
+    transition: all 0.3s;
+    margin-top:-4px;
+    font-weight:700;
+  }
+  [type="submit"]:hover { background:#b8b8b8; }
+
+
+
+
+
+
+/****** contact About box leftside********/
+
+
+.about-box {
+    display: grid;
+    background-color: rgba(255, 255, 255, 0.651);
+    grid-template-columns: 1fr;
+    grid-template-rows: 100px;
+    height: 100%;
+   
+}
+
+.about {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 60px 25px;
+    font-size: 3em;
+    height: 100px;
+    font-family: 'Racing Sans One', cursive;
+}
+
+.quote {
+    height: 28px;
+    padding: 0px 7px;
+}
+
+.text {
+    display: block;
+    margin: 0 auto;
+    text-align: center;
+    width: 65%;
+    justify-content: center;
+   padding-bottom: 30px;
+   font-size: .9em;
+   line-height: 2;
+   font-family: 'Cinzel', serif;
+   font-weight: 400;
+}
+
+.skills {
+    background-color: #000;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 20px 0;
+}
+
+.skills-icon {
+    font-size: 3.7em;
+    z-index: 2;
+    color: var(--clr);
+    display: flex;
+    justify-content: center;
+    flex-direction: row;
+}
+
+.skills-icon:hover{
+    animation: myAnim 2s ease 0s 1 normal forwards;
+}
+
+.skills h2 {
+    color: var(--clr); 
+    font-size: 1.8em;
+    text-transform: uppercase;
+    padding-right: 25px;
+    justify-content: start;
+    display: flex;
+    font-family: 'Racing Sans One', cursive;
+}
+
+@keyframes myAnim {
+    0% {
+      transform: translate(0);
+    }
+  
+    20% {
+      transform: translate(-2px, 2px);
+    }
+  
+    40% {
+      transform: translate(-2px, -2px);
+    }
+  
+    60% {
+      transform: translate(2px, 2px);
+    }
+  
+    80% {
+      transform: translate(2px, -2px);
+    }
+  
+    100% {
+      transform: translate(0);
+    }
+  }
+
+
+
+  /****** Work page  ********/
+
+  .work-section {
+      width: 100vw;
+    transform: translateX(10%);
+    animation: slide-in-anim 2.9s ease-out forwards;
+  }
+
+  .work-headline {
+    display: flex;
+    justify-content: center;
+    text-align: center;
+    height: 150px;
+  }
+
+  .headline {
+    font-size: 2.5em;
+    width: 100%;
+    text-transform: uppercase;
+    color: #000;
+    padding: 40px 0 0 0;
+    font-family: 'Cinzel', serif;
+  }
+
+
+  /****** grid page  ********/
+
+  .work-grid {
+      height: 750px;
+      display: grid;
+      grid-template-columns: 1fr;
+      padding: 0 50px 0 70px;
+      gap: 20px;
+      
+  }
+
+ .boxes {
+      background-color: rgb(29, 29, 29);
+      color: #FFF;
+      display: flex;
+      text-align: center;
+      justify-content: center;
+      align-items: flex-end;
+      text-transform: uppercase;
+      box-shadow: 21px 16px 27px 1px #202020;
+      background-size: cover;
+      background-position: center;
+  }
+
+  .boxes:hover {
+    transform: translateX(-30px);
+    transition: 2s ease;
+  }
+
+
+
+
+  /****** case studies  ********/
+
+  .case-studies {
+    display: flex;
+      justify-content: center;
+      text-align: center;
+      width: 100%;
+      flex-direction: column;
+      padding-top: 50px;
+      height: 1000px;
+  }
+
+  .case-title {
+      height: 50px;
+      padding: 0px 0;
+    font-size: 2.5em;
+    text-transform: uppercase;
+    font-family: 'Cinzel', serif;
+  }
+
+  .case-discription {
+      display: block;
+      margin: 0 auto;
+      padding: 20px 10px;
+      font-size: 1em;
+      width: 100%;
+      font-family: 'Cinzel', serif;
+  }
+
+  .case-boxes {
+      display: grid;
+      grid-template-columns: 1fr;
+      gap: 20px;
+      height: 750px;
+      padding: 10px 50px;
+  }
+
+  .box {
+      background-color: rgb(177, 174, 174);
+      display: flex;
+      text-align: center;
+      justify-content: flex-end;
+      padding: 15px;
+      color: #FFF;
+      text-transform: uppercase;
+      box-shadow: 21px 16px 27px 1px #202020;
+      background-size: cover;
+      background-position: center;
+  }
+
+  .boxes:nth-child(1){background-image: url('weather.jpg');}
+  .boxes:nth-child(2){background-image: url('car.jpg');}
+  .boxes:nth-child(3){background-image: url('app.jpg');}
+  .boxes:nth-child(4){background-image: url('nature.jpg');}
+
+  .box:nth-child(1){background-image: url('weather.jpg');}
+  .box:nth-child(2){background-image: url('car.jpg');}
+  .box:nth-child(3){background-image: url('app.jpg');}
+  .box:nth-child(4){background-image: url('nature.jpg');}
+
+
+.website-info {
+    color: rgb(255, 255, 255);
+}
+ 
+/****** case studies page css ********/
+
+.case-contain {
+    height: 100vh;
+}
+
+.case-header {
+    height: 600px;
+    display: flex;
+    flex-direction:column;
+    justify-content: center;
+    align-items: center;
+    background-image: url('car.jpg');
+    background-size: cover;
+    background-position: center;
+}
+
+.headline-1 {
+    color: rgb(235, 33, 33);
+    font-size: 3em;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-family: 'Racing Sans One', cursive;
+    padding-right: 25px;
+}
+
+.website-link {
+    color: #FFF;
+    margin-right: 5px;
+    height: 40px;
+    width: 150px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-transform: uppercase;
+    border: var(--clr) 2px solid;
+}
+
+
+
+/****** case section about & colors page css ********/
+
+.case-aboutsection {
+    display: grid;
+    grid-template-columns: 1fr;
+    height:100%;
+}
+
+.case-about {
+    color: white;
+    background-color: rgb(22, 28, 49);
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.case-about h2 {
+    font-size: 2.2em;
+    padding-bottom: 20px;
+    font-family: 'Racing Sans One', cursive;
+}
+
+.case-about p {
+    font-size: 1em;
+    text-align: center;
+    width: 320px;
+    font-family: 'Cinzel', serif;
+    padding-bottom: 70px;
+}
+
+
+.case-colors {
+    display: grid;
+    grid-template-columns: 1fr;
+    
+}
+
+.colors {
+    background-color: var(--clr);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 20px auto;
+    border-radius: 50%;
+    height: 170px;
+    width: 170px;
+    box-shadow: 19px 10px 37px 1px #4b4b4b;
+}
+
+.hex-color {
+    color: rgb(255, 255, 255);
+    
+}
+
+
+.font-section {
+    height: 100%;
+    display: grid;
+    grid-template-columns: 1fr;
+}
+
+.typeography {
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    flex-direction: column;
+    text-transform: uppercase;
+    padding-top: 55px;
+    padding-left: 20px;
+    font-family: 'Racing Sans One', cursive;
+
+}
+
+.font {
+    font-size: 2.2em;
+    padding-left: 25px;
+    
+    font-family: 'Racing Sans One', cursive;
+
+}
+
+.letters {
+    font-size: 1em;
+    line-height: 2;
+    letter-spacing: 2px;
+    width: 370px;
+    padding: 10px;
+    font-family: 'Racing Sans One', cursive;
+
+}
+
+
+#font {
+    font-size: 2.2em;
+    padding-left: 25px;
+    font-family: 'Cinzel', serif;
+}
+
+#letters {
+    font-size: 1em;
+    line-height: 2;
+    letter-spacing: 2px;
+    width: 370px;
+    padding: 10px;
+    font-family: 'Cinzel', serif;
+}
+
+
+/****** case section link arrow css ********/
+
+.case-link {
+    height: 250px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color:#161c31 ;
+}
+
+.next-link {
+    color: #FFF;
+    font-size: 4em;
+    font-family: 'Racing Sans One', cursive;
+
+}
+
+.arrow {
+    font-size: 3em;
+    color: white;
+    padding-left: 20px;
+    padding-top: 15px;
+}
+
+.case-link:hover {
+    transform: translateX(50px);
+    transition: 2s ease;
+    background-color: rgb(235, 33, 33);
+        font-family: 'Racing Sans One', cursive;
+
+}
+
+
+  }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+
+
+
+
+  @media only screen and (min-width: 820px) and (max-width: 1000px) {
+
+   
+
+
+/****** Landing Page********/
+
+
+.container {
+    height: 100vh;
+    width: 100%;
+    display: grid;
+    grid-template-columns: 70px 1fr;
+}
+
+#landing-page {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-areas: 'left right';
+    font-family: 'Cinzel', serif;
+    width: 100%;
+    height: 100%;
+    }
+
+
+.left-side {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    transform: translateX(-10%);
+    animation: slide-in-anim 3.9s ease-out forwards;
+    height: 100%;
+    
+}
+
+.left-side:hover {
+    transform: scale(1.1);
+    transition: 2s ease-in-out;
+}
+
+.subtitle-left {
+    font-size: .7em;
+    text-transform: uppercase;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-family: 'Cinzel', serif;
+    
+}
+
+.title {
+    font-size: 1.9rem;
+    text-transform: uppercase;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-family: 'Cinzel', serif;
+}
+
+.info-linkleft {
+    display: flex;
+    justify-content: center;
+    text-align: center;
+    font-size: .7em;
+    padding-top: 20px;
+    text-transform: uppercase;
+    font-family: 'Cinzel', serif;
+}
+
+
+
+
+
+
+/****** right side Page********/
+
+.right-side {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    grid-area: right;
+    background-image: url('black.jpg');
+    background-size: cover;
+   background-attachment: fixed;
+    color: white;
+  height: 100%;
+    
+}
+
+.subtitle-right {
+    font-size: .7em;
+    text-transform: uppercase;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transform: translateX(10%);
+    animation: slide-in-anim 3.9s ease-out forwards;
+    font-family: 'Racing Sans One', cursive;
+}
+
+.work-bubble {
+    font-family: 'Racing Sans One', cursive;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 1.9rem;
+    color: white;
+    text-transform: uppercase;
+    transform: translateX(10%);
+    animation: slide-in-anim 3.9s ease-out forwards;
+}
+
+
+
+
+
+
+
+/****** button style ********/
+#btn {
+    line-height: 50px;
+    height: 50px;
+    text-align: center;
+    width: 250px;
+    cursor: pointer;
+    display: block;
+    margin: 0 auto;
+    font-family: 'Racing Sans One', cursive;
+  }
+
+  .btn-three span {
+    display: flex;
+    align-items: center;
+}
+
+
+.btn {
+    line-height: 50px;
+    height: 50px;
+    text-align: center;
+    width: 250px;
+    cursor: pointer;
+    display: block;
+    margin: 0 auto;
+    font-family: 'Racing Sans One', cursive;
+  }
+
+  #btn-three span {
+      display: flex;
+      align-items: center;
+  }
+
+
+#btn-three {
+    background-color: rgba(0, 0, 0, 0.863);
+    color: rgb(255, 255, 255);
+    transition: all 0.5s;
+    width: 150px;
+    height: 30px;
+    display: flex;
+    position: relative;
+    justify-content: center;
+    text-align: center;
+    font-size: .5em;
+    padding-top: 0px;
+    text-transform: uppercase;
+    transform: translateX(10%);
+    animation: slide-in-anim 3.9s ease-out forwards;
+  }
+  #btn-three::before {
+    position: absolute;
+    display: block;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    transition: all 0.3s;
+  }
+  #btn-three:hover::before {
+    opacity: 0 ;
+    transform: scale(0.5,0.5);
+  }
+  #btn-three::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 1;
+    opacity: 0;
+    transition: all 0.3s;
+    border: 1px solid rgba(0, 0, 0, 0.5);
+    transform: scale(1.2,1.2);
+  }
+  #btn-three:hover::after {
+    opacity: 1;
+    transform: scale(1,1);
+    
+  }
+  #btn-three:hover{
+      
+      color: #000;
+      background-color: rgba(94, 94, 94, 0);
+  }
+
+
+.btn-three {
+    
+    color: #FFF;
+    transition: all 0.5s;
+    position: relative;
+    justify-content: center;
+    text-align: center;
+    display: flex;
+    width: 150px;
+    height: 30px;
+    font-size: .5em;
+    padding-top: 0px;
+    text-transform: uppercase;
+    transform: translateX(10%);
+    animation: slide-in-anim 3.9s ease-out forwards;
+  }
+  .btn-three::before {
+    content: '';
+    position: absolute;
+    display: block;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 1;
+    background-color: rgba(255,255,255,0.1);
+    transition: all 0.3s;
+  }
+  .btn-three:hover::before {
+    opacity: 0 ;
+    transform: scale(0.5,0.5);
+  }
+  .btn-three::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 1;
+    opacity: 0;
+    transition: all 0.3s;
+    border: 1px solid rgba(255,255,255,0.5);
+    transform: scale(1.2,1.2);
+  }
+  .btn-three:hover::after {
+    opacity: 1;
+    transform: scale(1,1);
+  }
+
+
+/****** footer********/
+
+.footer {
+    display: flex;
+    justify-content: center;
+    height: 60px;
+    background-color: rgb(19, 19, 19);
+    z-index: 1;
+    width: 100vw;
+}
+
+.foot-text {
+    color: white;
+    text-align: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-transform: uppercase;
+    font: .8em sans-serif;
+}
+
+
+
+
+
+
+
+
+  
+/****** contact Page********/
+
+
+
+.contact-box {
+    background-color: rgb(138, 138, 138);
+    margin: 80px;
+    transform: translateX(10%);
+    animation: slide-in-anim 2.9s ease-out forwards;
+    box-shadow: 25px 15px 30px 1px rgb(170, 170, 170);
+}
+
+.contact-info {
+    background-color: rgb(20, 20, 20);
+    
+    
+}
+
+/****** contact chat box rightside********/
+
+.chat {
+    padding: 0 25px;
+    color: white;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 4.7em;
+    font-family: 'Racing Sans One', cursive;
+}
+
+
+.contact-form {
+    width: 400px;
+    display: block;
+    margin: 0 auto;
+    padding-top: 40px;
+}
+
+
+.feedback-input {
+    color:white;
+    font-family: Helvetica, Arial, sans-serif;
+    font-weight:500;
+    font-size: 18px;
+    line-height: 22px;
+    background-color: transparent;
+    border:2px solid #b8b8b8;
+    transition: all 0.3s;
+    padding: 13px;
+    margin-bottom: 15px;
+    outline:0;
+    width: 100%;
+  }
+  
+  .feedback-input:focus { border:2px solid #b8b8b8; }
+  
+  textarea {
+    height: 150px;
+    line-height: 150%;
+    resize:vertical;
+  }
+  
+  [type="submit"] {
+    font-family: 'Montserrat', Arial, Helvetica, sans-serif;
+    width: 100%;
+    background:#b8b8b8;
+    border-radius:5px;
+    border:0;
+    cursor:pointer;
+    color:white;
+    font-size:24px;
+    padding-top:10px;
+    padding-bottom:10px;
+    transition: all 0.3s;
+    margin-top:-4px;
+    font-weight:700;
+  }
+  [type="submit"]:hover { background:#b8b8b8; }
+
+
+
+
+
+
+/****** contact About box leftside********/
+
+
+.about-box {
+    display: grid;
+    background-color: rgba(255, 255, 255, 0.651);
+    grid-template-columns: 1fr;
+    grid-template-rows: 100px;
+    height: 100%;
+   
+}
+
+.about {
+    display: flex;
+    align-items: center;
+    padding: 60px 25px;
+    font-size: 3em;
+    height: 100px;
+    font-family: 'Racing Sans One', cursive;
+}
+
+.quote {
+    height: 28px;
+    padding: 0px 15px;
+}
+
+.text {
+   padding: 0px 25px;
+   
+   padding-bottom: 30px;
+   font-size: 1em;
+   line-height: 2;
+   font-family: 'Cinzel', serif;
+   font-weight: 400;
+}
+
+.skills {
+    background-color: #000;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 20px 0;
+}
+
+.skills-icon {
+    font-size: 3.7em;
+    z-index: 2;
+    color: var(--clr);
+    display: flex;
+    justify-content: center;
+    flex-direction: row;
+}
+
+.skills-icon:hover{
+    animation: myAnim 2s ease 0s 1 normal forwards;
+}
+
+.skills h2 {
+    color: var(--clr); 
+    font-size: 2.8em;
+    text-transform: uppercase;
+    padding-right: 25px;
+    justify-content: start;
+    display: flex;
+    font-family: 'Racing Sans One', cursive;
+}
+
+@keyframes myAnim {
+    0% {
+      transform: translate(0);
+    }
+  
+    20% {
+      transform: translate(-2px, 2px);
+    }
+  
+    40% {
+      transform: translate(-2px, -2px);
+    }
+  
+    60% {
+      transform: translate(2px, 2px);
+    }
+  
+    80% {
+      transform: translate(2px, -2px);
+    }
+  
+    100% {
+      transform: translate(0);
+    }
+  }
+
+
+
+  /****** Work page  ********/
+
+  .work-section {
+      height: 100%;
+      width: 100vw;
+    transform: translateX(10%);
+    animation: slide-in-anim 2.9s ease-out forwards;
+  }
+
+  .work-headline {
+    display: flex;
+    justify-content: center;
+    text-align: center;
+    height: 150px;
+  }
+
+  .headline {
+    font-size: 2.5em;
+    width: 100%;
+    text-transform: uppercase;
+    color: #000;
+    padding: 40px 0 0 0;
+    font-family: 'Cinzel', serif;
+  }
+
+
+  /****** grid page  ********/
+
+  .work-grid {
+      height: 1050px;
+      display: grid;
+      grid-template-columns: 1fr;
+      padding: 0 50px 0 70px;
+      gap: 20px;
+      
+  }
+
+ .boxes {
+      background-color: rgb(29, 29, 29);
+      color: #FFF;
+      display: flex;
+      text-align: center;
+      justify-content: center;
+      align-items: flex-end;
+      text-transform: uppercase;
+      box-shadow: 21px 16px 27px 1px #202020;
+      background-size: cover;
+      background-position: center;
+      font-size: 1.3em;
+      font-weight: bold;
+      
+  }
+
+  .boxes:hover {
+    transform: translateX(-30px);
+    transition: 2s ease;
+  }
+
+
+
+
+  /****** case studies  ********/
+
+  .case-studies {
+    display: flex;
+      justify-content: center;
+      text-align: center;
+      width: 100%;
+      flex-direction: column;
+      padding-top: 50px;
+      height: 1000px;
+  }
+
+  .case-title {
+      height: 50px;
+      padding: 0px 0;
+    font-size: 2.5em;
+    text-transform: uppercase;
+    font-family: 'Cinzel', serif;
+  }
+
+  .case-discription {
+      display: block;
+      margin: 0 auto;
+      padding: 20px 10px;
+      font-size: 1em;
+      width: 100%;
+      font-family: 'Cinzel', serif;
+  }
+
+  .case-boxes {
+      display: grid;
+      grid-template-columns: 1fr;
+      gap: 20px;
+      height: 850px;
+      padding: 10px 50px;
+  }
+
+  
+  .box {
+    background-color: rgb(177, 174, 174);
+    display: flex;
+    text-align: center;
+    justify-content: flex-end;
+    padding: 15px;
+    color: #FFF;
+    text-transform: uppercase;
+    box-shadow: 21px 16px 27px 1px #202020;
+    background-size: cover;
+    background-position: center;
+}
+
+.boxes:nth-child(1){background-image: url('weather.jpg');}
+.boxes:nth-child(2){background-image: url('car.jpg');}
+.boxes:nth-child(3){background-image: url('app.jpg');}
+.boxes:nth-child(4){background-image: url('nature.jpg');}
+
+.box:nth-child(1){background-image: url('weather.jpg');}
+.box:nth-child(2){background-image: url('car.jpg');}
+.box:nth-child(3){background-image: url('app.jpg');}
+.box:nth-child(4){background-image: url('nature.jpg');}
+
+
+.website-info {
+  color: rgb(255, 255, 255);
+}
+
+
+
+
+/****** case studies page css ********/
+
+.case-contain {
+    height: 100vh;
+    width: 100vw;
+}
+
+.case-header {
+    height: 600px;
+    display: flex;
+    justify-content: flex-start;
+    flex-direction: column;
+    align-items: flex-end;
+    background-image: url('car.jpg');
+    background-size: cover;
+    background-position:bottom center;
+    
+}
+
+.headline-1 {
+    color: rgb(235, 33, 33);
+    font-size: 4em;
+    font-family: 'Racing Sans One', cursive;
+    padding-right: 25px;
+    display: flex; justify-content: center;
+}
+
+.website-link {
+    color: #FFF;
+    margin-right: 105px;
+    height: 40px;
+    width: 150px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-transform: uppercase;
+    border: var(--clr) 2px solid;
+}
+
+
+/****** case section about & colors page css ********/
+
+.case-aboutsection {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    height: 500px;
+}
+
+.case-about {
+    color: white;
+    background-color: rgb(22, 28, 49);
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.case-about h2 {
+    font-size: 4em;
+    padding-bottom: 20px;
+    font-family: 'Racing Sans One', cursive;
+}
+
+.case-about p {
+    font-size: 1em;
+    text-align: center;
+    width: 440px;
+    font-family: 'Cinzel', serif;
+}
+
+
+.case-colors {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    
+}
+
+.colors {
+    background-color: var(--clr);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 50px auto;
+    border-radius: 50%;
+    height: 130px;
+    width: 130px;
+    box-shadow: 19px 10px 37px 1px #4b4b4b;
+}
+
+.hex-color {
+    color: rgb(255, 255, 255);
+    
+}
+
+
+.font-section {
+    height: 500px;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+}
+
+.typeography {
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    flex-direction: column;
+    text-transform: uppercase;
+    padding-top: 55px;
+    padding-left: 45px;
+    font-family: 'Racing Sans One', cursive;
+
+}
+
+.font {
+    font-size: 2.6em;
+    padding-left: 25px;
+    
+    font-family: 'Racing Sans One', cursive;
+
+}
+
+.letters {
+    font-size: 2.4em;
+    line-height: 2;
+    letter-spacing: 2px;
+    width: 350px;
+    padding: 30px;
+    font-family: 'Racing Sans One', cursive;
+
+}
+
+
+#font {
+    font-size: 2.6em;
+    padding-left: 25px;
+    font-family: 'Cinzel', serif;
+}
+
+#letters {
+    font-size: 2em;
+    line-height: 2;
+    letter-spacing: 2px;
+    width: 350px;
+    padding: 30px;
+    font-family: 'Cinzel', serif;
+}
+
+
+/****** case section link arrow css ********/
+
+.case-link {
+    height: 250px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color:#161c31 ;
+}
+
+.next-link {
+    color: #FFF;
+    font-size: 4em;
+    font-family: 'Racing Sans One', cursive;
+
+}
+
+.arrow {
+    font-size: 4em;
+    color: white;
+    padding-left: 20px;
+    padding-top: 15px;
+}
+
+.case-link:hover {
+    transform: translateX(50px);
+    transition: 2s ease;
+    background-color: rgb(235, 33, 33);
+        font-family: 'Racing Sans One', cursive;
+
+}
+
+
+
+  }
